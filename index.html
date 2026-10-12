@@ -49,16 +49,22 @@
             class="button button-ghost" href="Sai_Santosh_Resume.docx" download>Download résumé <span>↓</span></a></div>
         <div class="hero-social"><a href="https://github.com/SaiSantoshSangam" target="_blank" rel="noreferrer">GitHub
             ↗</a><a href="https://www.linkedin.com/in/sangam-sai-santosh/" target="_blank" rel="noreferrer">LinkedIn
-            ↗</a><a href="mailto:sangamsaisantosh@gmail.com">Email ↗</a></div>
+            ↗</a><a href="mailto:sangamsaisantosh@gmail.com" class="email-trigger" id="hero-email" title="Send email to Sangam Sai Santosh">Email ↗</a></div>
       </div>
       <div class="hero-visual reveal" aria-label="Abstract AI network visualization">
         <div class="visual-grid"></div>
         <div class="orbit orbit-a"></div>
         <div class="orbit orbit-b"></div>
         <div class="orbit orbit-c"></div>
-        <div class="core">
-          <div class="core-inner"><span class="core-symbol">✳</span><span>AI SYSTEMS</span><small>THINK · BUILD ·
-              ITERATE</small></div>
+        <div class="core hero-portrait-core" title="Sangam Sai Santosh — Software AI Engineer">
+          <div class="portrait-glow-ring"></div>
+          <div class="portrait-img-wrap">
+            <img src="img/Professional Corporate Headshot.png" alt="Sangam Sai Santosh — Software AI Engineer" class="hero-avatar" />
+          </div>
+          <div class="portrait-badge">
+            <span class="status-dot pulse-dot"></span>
+            <span>AI ENGINEER</span>
+          </div>
         </div>
         <div class="float-chip chip-llm"><span
             class="chip-icon">◈</span><span><b>LLM</b><small>Integration</small></span></div>
@@ -74,7 +80,19 @@
     <section class="section-wrap intro-strip reveal" id="about">
       <div class="section-kicker">01 — ABOUT</div>
       <div class="intro-content">
-        <h2>Engineering first.<br><span class="muted">AI where it matters.</span></h2>
+        <div class="intro-title-col">
+          <h2>Engineering first.<br><span class="muted">AI where it matters.</span></h2>
+          <div class="about-profile-badge">
+            <div class="about-avatar-wrap">
+              <img src="img/Professional Corporate Headshot.png" alt="Sangam Sai Santosh" class="about-avatar-mini" />
+              <span class="about-status-indicator"></span>
+            </div>
+            <div class="about-badge-text">
+              <strong>Sangam Sai Santosh</strong>
+              <span>Software AI Engineer @ FireFlink</span>
+            </div>
+          </div>
+        </div>
         <div>
           <p>I'm a Software AI Engineer at FireFlink, contributing to AI-assisted automation across Web, Android, and
             iOS. My work includes LLM integrations, DOM injection and filtering, XPath fallback strategies, vision-based
@@ -147,11 +165,11 @@
           <article class="project-card project-featured reveal">
             <div class="project-art art-automation">
               <div class="art-label">FIREFLINK / AUTOMATION</div>
-              <div class="flow-node node-one">Natural language</div>
-              <div class="flow-connector"></div>
-              <div class="flow-node node-two">LLM + DOM</div>
-              <div class="flow-connector"></div>
-              <div class="flow-node node-three">Web · Android · iOS</div>
+              <div class="flow-node node-one"><span class="node-icon">⚡</span>Natural language</div>
+              <div class="flow-connector connector-top"><span class="data-pulse pulse-down"></span></div>
+              <div class="flow-node node-two"><span class="node-icon">🤖</span>LLM + DOM</div>
+              <div class="flow-connector connector-bottom"><span class="data-pulse pulse-down delay-1"></span></div>
+              <div class="flow-node node-three"><span class="node-icon">📱</span>Web · Android · iOS</div>
               <div class="art-orbit"></div>
             </div>
             <div class="project-info">
@@ -176,9 +194,12 @@
           <article class="project-card reveal">
             <div class="project-art art-docs">
               <div class="doc-chip">PDF / DOCX</div>
-              <div class="doc-lines"><i></i><i></i><i></i><i></i></div>
+              <div class="doc-container">
+                <div class="doc-scanner-beam"></div>
+                <div class="doc-lines"><i></i><i></i><i></i><i></i></div>
+              </div>
               <div class="doc-arrow">→</div>
-              <div class="doc-result"><span>✳</span><b>Test cases</b><small>Structured output</small></div>
+              <div class="doc-result"><span class="sparkle-icon">✳</span><b>Test cases</b><small>Structured output</small></div>
               <div class="doc-orb"></div>
             </div>
             <div class="project-info">
@@ -201,10 +222,10 @@
               <div class="agent agent-b">Orchestrator</div>
               <div class="agent agent-c">Tools</div>
               <div class="agent agent-d">Kafka</div>
-              <div class="agent-link link-a"></div>
-              <div class="agent-link link-b"></div>
-              <div class="agent-link link-c"></div>
-              <div class="agent-center">AI</div>
+              <div class="agent-link link-a"><span class="signal-dot dot-a"></span></div>
+              <div class="agent-link link-b"><span class="signal-dot dot-b"></span></div>
+              <div class="agent-link link-c"><span class="signal-dot dot-c"></span></div>
+              <div class="agent-center"><span class="agent-core-pulse"></span>AI</div>
             </div>
             <div class="project-info">
               <div class="project-meta"><span>03 / PROFESSIONAL PROJECT</span><span>AGENTIC WORKFLOWS</span></div>
@@ -222,6 +243,7 @@
 
           <article class="project-card reveal">
             <div class="project-art art-search">
+              <div class="radar-sweep-beam"></div>
               <div class="search-ring ring-1"></div>
               <div class="search-ring ring-2"></div>
               <div class="search-ring ring-3"></div>
@@ -245,36 +267,15 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="project-art art-agent">
-              <div class="credential-card"><span>SECURE WORKFLOW</span>
-                <div class="credential-lock">⌑</div><b>Credential AI Agent</b><small>Classify → Retrieve → Act</small>
-              </div>
-              <div class="agent-pulse"></div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta"><span>05 / PERSONAL PROJECT</span><span>MULTI-AGENT AI</span></div>
-              <h3>Credential-AI-Agent</h3>
-              <p>Developed a CrewAI multi-agent workflow to classify PDF/text inputs and extract account details, with
-                RAG-based lookup and fallback handling for missing information.</p>
-              <ul class="project-points">
-                <li>Searchable account data using vector retrieval.</li>
-                <li>Fallback prompts when required details are missing.</li>
-                <li>Workflow support for automated login tasks.</li>
-              </ul>
-              <div class="project-stack">Python · CrewAI · RAG · LangChain · FAISS</div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
             <div class="project-art art-smart">
               <div class="smart-step">Automation step</div>
-              <div class="smart-line"></div>
-              <div class="smart-brain">✳</div>
-              <div class="smart-line"></div>
+              <div class="smart-line line-top"><span class="smart-energy energy-one"></span></div>
+              <div class="smart-brain"><span class="brain-halo"></span>✳</div>
+              <div class="smart-line line-bottom"><span class="smart-energy energy-two"></span></div>
               <div class="smart-step smart-output">Wait / Verify suggestion</div>
             </div>
             <div class="project-info">
-              <div class="project-meta"><span>06 / ENGINEERING DESIGN</span><span>LLM · PYTHON</span></div>
+              <div class="project-meta"><span>05 / ENGINEERING DESIGN</span><span>LLM · PYTHON</span></div>
               <h3>Smart NLP Suggestion</h3>
               <p>Designed the architecture and workflow for analyzing automation steps and recommending relevant wait
                 and verification actions.</p>
@@ -284,6 +285,31 @@
                 <li>LLM provider integration approach across multiple providers.</li>
               </ul>
               <div class="project-stack">Python · Flask · OpenAI · Anthropic · Groq · asyncio</div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art art-agent">
+              <div class="credential-card">
+                <span>SECURE WORKFLOW</span>
+                <div class="credential-lock">⌑</div>
+                <b>Credential AI Agent</b>
+                <small>Classify → Retrieve → Act</small>
+                <div class="credential-scanline"></div>
+              </div>
+              <div class="agent-pulse"></div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>06 / PERSONAL PROJECT</span><span>MULTI-AGENT AI</span></div>
+              <h3>Credential-AI-Agent</h3>
+              <p>Developed a CrewAI multi-agent workflow to classify PDF/text inputs and extract account details, with
+                RAG-based lookup and fallback handling for missing information.</p>
+              <ul class="project-points">
+                <li>Searchable account data using vector retrieval.</li>
+                <li>Fallback prompts when required details are missing.</li>
+                <li>Workflow support for automated login tasks.</li>
+              </ul>
+              <div class="project-stack">Python · CrewAI · RAG · LangChain · FAISS</div>
             </div>
           </article>
         </div>
@@ -338,12 +364,12 @@
         <div class="section-kicker">05 — CONTACT</div>
         <h2>Have a problem worth<br><span class="gradient-text">solving with AI?</span></h2>
         <p>I'm always interested in discussing intelligent automation, LLM workflows, and practical AI engineering.</p>
-        <div class="contact-actions"><a class="button button-primary" href="mailto:sangamsaisantosh@gmail.com">Start a
-            conversation ↗</a><button class="button button-ghost" id="copy-email"
+        <div class="contact-actions"><a class="button button-primary email-trigger" id="start-conversation-btn" href="mailto:sangamsaisantosh@gmail.com">Start a
+            conversation <span>↗</span></a><button class="button button-ghost" id="copy-email"
             data-email="sangamsaisantosh@gmail.com">Copy email <span>⧉</span></button></div>
         <div class="contact-links"><a href="https://github.com/SaiSantoshSangam" target="_blank" rel="noreferrer">GitHub
             ↗</a><a href="https://www.linkedin.com/in/sangam-sai-santosh/" target="_blank" rel="noreferrer">LinkedIn
-            ↗</a><a href="mailto:sangamsaisantosh@gmail.com">sangamsaisantosh@gmail.com</a><span>Bengaluru, India</span>
+            ↗</a><a href="mailto:sangamsaisantosh@gmail.com" class="email-trigger">sangamsaisantosh@gmail.com</a><span>Bengaluru, India</span>
         </div>
       </div>
     </section>
@@ -352,6 +378,69 @@
           class="brand-sub">AI ENGINEER</span></span></a><span>Designed around curiosity. Built for
       impact.</span><span>© <span id="year"></span> Sangam Sai Santosh</span></footer>
   <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Interactive Contact & Email Composer Modal -->
+  <div class="contact-modal-overlay" id="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="contact-modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-header">
+        <div class="modal-badge"><span class="status-dot"></span> DIRECT INBOX</div>
+        <h3 id="modal-title">Start a Conversation</h3>
+        <p>Send a message directly to <strong>Sangam Sai Santosh</strong> via your preferred email option.</p>
+      </div>
+
+      <div class="modal-to-pill">
+        <span class="to-label">To:</span>
+        <strong class="to-email">sangamsaisantosh@gmail.com</strong>
+        <button type="button" class="mini-copy-btn" id="modal-copy-btn" title="Copy email address">Copy ⧉</button>
+      </div>
+
+      <div class="modal-quick-actions">
+        <a class="quick-action-btn gmail-btn" id="open-gmail-direct" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=sangamsaisantosh@gmail.com&su=AI%20Engineering%20Collaboration%20-%20Sangam%20Sai%20Santosh&body=Hi%20Sai%20Santosh,%0A%0AI%20reviewed%20your%20portfolio%20and%20wanted%20to%20connect%20with%20you%20regarding...">
+          <span class="btn-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cyan)"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+          <div class="action-text">
+            <strong>Open in Gmail</strong>
+            <small>Direct browser compose in new tab</small>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+
+        <a class="quick-action-btn mailto-btn" id="open-mailapp-direct" href="mailto:sangamsaisantosh@gmail.com?subject=AI%20Engineering%20Collaboration%20-%20Sangam%20Sai%20Santosh&body=Hi%20Sai%20Santosh,%0A%0AI%20reviewed%20your%20portfolio%20and%20wanted%20to%20connect%20with%20you%20regarding...">
+          <span class="btn-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--purple)"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></span>
+          <div class="action-text">
+            <strong>Default Mail App</strong>
+            <small>Outlook, Apple Mail, or Thunderbird</small>
+          </div>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="modal-divider"><span>OR QUICK COMPOSE MESSAGE</span></div>
+
+      <form class="modal-form" id="quick-email-form">
+        <div class="form-field">
+          <label for="form-name">Your Name</label>
+          <input type="text" id="form-name" placeholder="e.g. Alex Morgan" required />
+        </div>
+        <div class="form-field">
+          <label for="form-subject">Subject</label>
+          <input type="text" id="form-subject" value="Discussion regarding AI Engineering Opportunities" required />
+        </div>
+        <div class="form-field">
+          <label for="form-message">Message</label>
+          <textarea id="form-message" rows="3" placeholder="Hi Sai Santosh, I came across your portfolio and would like to discuss..." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button button-primary modal-submit-btn" id="submit-gmail">
+            Send via Gmail <span>↗</span>
+          </button>
+          <button type="button" class="button button-ghost modal-submit-btn" id="submit-mailapp">
+            Send via Mail App <span>↗</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
