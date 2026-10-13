@@ -16,67 +16,124 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
 </head>
 
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+  <canvas id="neural-canvas" class="neural-canvas" aria-hidden="true"></canvas>
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div class="ambient-glow glow-primary" aria-hidden="true"></div>
+  <div class="ambient-glow glow-secondary" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Santosh home"><span
-        class="brand-mark">S<span>.</span></span><span>SANTOSH<span class="brand-sub">AI ENGINEER</span></span></a>
+    <a class="brand" href="#home" aria-label="Santosh home">
+      <span class="brand-mark">S<span>.</span></span>
+      <span class="brand-title">SANTOSH<span class="brand-sub">AI SYSTEMS ENGINEER</span></span>
+    </a>
+    <div class="topbar-status-hud" aria-hidden="true">
+      <span class="status-dot live-pulse"></span>
+      <span class="hud-label">NEURAL PIPELINE: <strong class="hud-val">ONLINE</strong></span>
+    </div>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Projects</a><a
-        href="#journey">Journey</a><a href="#contact" class="nav-cta">Let's connect <span>↗</span></a>
+      <a href="#about">About</a>
+      <a href="#expertise">Toolkit</a>
+      <a href="#ai-lab">AI Lab</a>
+      <a href="#work">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact" class="nav-cta email-trigger">Connect <span>↗</span></a>
     </nav>
   </header>
 
   <main>
     <section class="hero section-wrap" id="home">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> SOFTWARE AI ENGINEER <span class="eyebrow-line"></span>
-          BENGALURU, INDIA</div>
-        <h1>Building useful AI.<br><span class="gradient-text">Automating the complex.</span></h1>
-        <p class="hero-lede">I'm <strong>Sangam Sai Santosh</strong> — an engineer working at the intersection of
-          Generative AI, LLM integration, and intelligent test automation.</p>
-        <p class="hero-note">From DOM-aware element discovery to agentic workflows, I turn complex engineering problems
-          into practical systems.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span>↘</span></a><a
-            class="button button-ghost" href="Sai_Santosh_Resume.docx" download>Download résumé <span>↓</span></a></div>
-        <div class="hero-social"><a href="https://github.com/SaiSantoshSangam" target="_blank" rel="noreferrer">GitHub
-            ↗</a><a href="https://www.linkedin.com/in/sangam-sai-santosh/" target="_blank" rel="noreferrer">LinkedIn
-            ↗</a><a href="mailto:sangamsaisantosh@gmail.com" class="email-trigger" id="hero-email"
-            title="Send email to Sangam Sai Santosh">Email ↗</a></div>
-      </div>
-      <div class="hero-visual reveal" aria-label="Abstract AI network visualization">
-        <div class="visual-grid"></div>
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="orbit orbit-c"></div>
-        <div class="core hero-portrait-core" title="Sangam Sai Santosh — Software AI Engineer">
-          <div class="portrait-glow-ring"></div>
-          <div class="portrait-img-wrap">
-            <img src="img/Professional Corporate Headshot.png" alt="Sangam Sai Santosh — Software AI Engineer"
-              class="hero-avatar" />
+        <div class="hero-hud-badge">
+          <span class="hud-status-indicator"><span class="status-dot live-pulse"></span> ACTIVE RUNTIME</span>
+          <span class="hud-divider">/</span>
+          <span class="hud-mono">LLM ORCHESTRATION & RESILIENT AUTOMATION</span>
+        </div>
+        <h1 class="hero-h1">Building Useful AI.<br><span class="gradient-text cyber-glow-text">Automating The Complex.</span></h1>
+        <p class="hero-lede">I'm <strong>Sangam Sai Santosh</strong> — Software AI Engineer at FireFlink engineering practical LLM integrations, resilient DOM discovery, and multi-agent systems across Web, Android, and iOS.</p>
+        
+        <!-- Live AI System Terminal -->
+        <div class="hero-terminal" aria-label="Live AI System Terminal Simulation">
+          <div class="terminal-bar">
+            <div class="terminal-traffic">
+              <span class="t-dot dot-red"></span>
+              <span class="t-dot dot-yellow"></span>
+              <span class="t-dot dot-green"></span>
+            </div>
+            <span class="terminal-filename">engine/ai-orchestration.ts</span>
+            <span class="terminal-chip"><span class="status-dot live-pulse"></span> LIVE SIMULATION</span>
           </div>
-          <div class="portrait-badge">
-            <span class="status-dot pulse-dot"></span>
-            <span>AI ENGINEER</span>
+          <div class="terminal-content">
+            <div class="t-row"><span class="t-prompt">❯</span> <span class="t-keyword">await</span> <span class="t-fn">fireflinkAI</span>.<span class="t-fn">optimizePayload</span>({ <span class="t-prop">domFiltering</span>: <span class="t-bool">true</span> });</div>
+            <div class="t-row t-res"><span class="t-check">✓</span> <span class="t-cyan">Token Compression:</span> 70–90% payload reduction verified</div>
+            <div class="t-row"><span class="t-prompt">❯</span> <span class="t-keyword">await</span> <span class="t-fn">semanticRetrieval</span>.<span class="t-fn">query</span>(<span class="t-str">"resilient_element_locator"</span>);</div>
+            <div class="t-row t-res"><span class="t-check">✓</span> <span class="t-purple">Vector Lookup:</span> all-MiniLM embeddings + FAISS cosine index match</div>
+            <div class="t-row t-res"><span class="t-check">✓</span> <span class="t-green">Vision Fallback:</span> 80% accuracy detection armed for Shadow DOM</div>
           </div>
         </div>
-        <div class="float-chip chip-llm"><span
-            class="chip-icon">◈</span><span><b>LLM</b><small>Integration</small></span></div>
-        <div class="float-chip chip-agent"><span
-            class="chip-icon">⌘</span><span><b>Agents</b><small>Orchestration</small></span></div>
-        <div class="float-chip chip-rag"><span class="chip-icon">⌕</span><span><b>Retrieval</b><small>RAG ·
-              Embeddings</small></span></div>
-        <div class="visual-caption"><span class="status-dot"></span> ENGINEERING INTELLIGENCE INTO WORKFLOWS</div>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore Projects <span>↘</span></a>
+          <a class="button button-ghost" href="#ai-lab">Launch AI Lab <span>⚡</span></a>
+          <a class="button button-outline" href="Sai_Santosh_Resume.docx" download>Download CV <span>↓</span></a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/SaiSantoshSangam" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/sangam-sai-santosh/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="mailto:sangamsaisantosh@gmail.com" class="email-trigger" id="hero-email" title="Send email to Sangam Sai Santosh">Email ↗</a>
+          <span class="hero-loc">📍 Bengaluru, India</span>
+        </div>
       </div>
-      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 05</span></div>
+      <div class="hero-visual reveal" aria-label="AI Systems Command Center">
+        <div class="visual-radar-bg" aria-hidden="true"></div>
+        <div class="orbit-hud orbit-a" aria-hidden="true"></div>
+        <div class="orbit-hud orbit-b" aria-hidden="true"></div>
+        <div class="orbit-hud orbit-c" aria-hidden="true"></div>
+        
+        <div class="core hero-portrait-core" title="Sangam Sai Santosh — Software AI Engineer">
+          <div class="portrait-hud-ring" aria-hidden="true"></div>
+          <div class="portrait-glow-ring" aria-hidden="true"></div>
+          <div class="portrait-img-wrap">
+            <img src="img/Professional Corporate Headshot.png" alt="Sangam Sai Santosh — Software AI Engineer" class="hero-avatar" />
+          </div>
+          <div class="portrait-badge">
+            <span class="status-dot live-pulse"></span>
+            <span>AI SYSTEMS ENGINEER</span>
+          </div>
+        </div>
+        
+        <div class="float-chip chip-llm">
+          <span class="chip-icon">◈</span>
+          <div>
+            <b>LLM Integration</b>
+            <small>70–90% Token Reduction</small>
+          </div>
+        </div>
+        <div class="float-chip chip-agent">
+          <span class="chip-icon">⌘</span>
+          <div>
+            <b>Agent Orchestration</b>
+            <small>Kafka · Tool Calling · Safety</small>
+          </div>
+        </div>
+        <div class="float-chip chip-rag">
+          <span class="chip-icon">⌕</span>
+          <div>
+            <b>Neural Retrieval</b>
+            <small>all-MiniLM · FAISS · RAG</small>
+          </div>
+        </div>
+        <div class="visual-caption">
+          <span class="status-dot live-pulse"></span> ARCHITECTING PRODUCTION-GRADE AI WORKFLOWS
+        </div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 06</span></div>
     </section>
 
     <section class="section-wrap intro-strip reveal" id="about">
@@ -156,11 +213,170 @@
           ACP</span><span>Machine Learning</span></div>
     </section>
 
+        <!-- 03 — INTERACTIVE AI WORKFLOW LAB -->
+    <section class="section-wrap lab-section" id="ai-lab">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">03 — INTERACTIVE AI LAB</div>
+          <h2>Live Architecture Sandbox<span class="accent">.</span></h2>
+        </div>
+        <p>Explore real-time simulations of the AI architectures and optimizations I build in production.</p>
+      </div>
+
+      <div class="lab-container reveal">
+        <div class="lab-tab-bar" role="tablist">
+          <button class="lab-tab active" data-lab="dom" role="tab" aria-selected="true">
+            <span class="tab-glyph">⚡</span>
+            <div class="tab-text">
+              <strong>DOM Token Compression</strong>
+              <small>-85% LLM Prompt Payload</small>
+            </div>
+          </button>
+          <button class="lab-tab" data-lab="fallback" role="tab" aria-selected="false">
+            <span class="tab-glyph">🎯</span>
+            <div class="tab-text">
+              <strong>XPath + Vision Fallback</strong>
+              <small>Multi-Modal Element Discovery</small>
+            </div>
+          </button>
+          <button class="lab-tab" data-lab="rag" role="tab" aria-selected="false">
+            <span class="tab-glyph">⌕</span>
+            <div class="tab-text">
+              <strong>Modular RAG Pipeline</strong>
+              <small>all-MiniLM Vector Indexing</small>
+            </div>
+          </button>
+          <button class="lab-tab" data-lab="agent" role="tab" aria-selected="false">
+            <span class="tab-glyph">⌘</span>
+            <div class="tab-text">
+              <strong>Agentic Tool Orchestrator</strong>
+              <small>Event-Driven Kafka Messaging</small>
+            </div>
+          </button>
+        </div>
+
+        <div class="lab-screen">
+          <!-- Tab 1: DOM Token Filter -->
+          <div class="lab-view active" id="lab-dom">
+            <div class="lab-screen-header">
+              <span class="lab-meta-tag">ENGINE: DOM INJECTION & TREE PRUNING</span>
+              <span class="lab-metric-badge">OPTIMIZATION: 14,800 → 1,920 TOKENS (87% SAVED)</span>
+            </div>
+            <div class="lab-code-comparison">
+              <div class="code-panel">
+                <div class="panel-head"><span class="dot-warn">●</span> RAW UNOPTIMIZED DOM TREE</div>
+                <pre><code>&lt;div class="checkout-wrapper" id="root-app"&gt;
+  &lt;!-- 280kb of inline SVG, tracking scripts, metadata --&gt;
+  &lt;header style="display:flex; position:sticky..."&gt;...&lt;/header&gt;
+  &lt;div class="cart-sidebar" data-analytics="evt_98"&gt;...&lt;/div&gt;
+  &lt;form id="payment-form"&gt;
+    &lt;button id="submit-order" class="btn primary"&gt;Place Order&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+              <div class="panel-arrow">➔ FILTER ➔</div>
+              <div class="code-panel panel-optimized">
+                <div class="panel-head"><span class="dot-success">●</span> FILTERED LLM PAYLOAD (STRUCTURED)</div>
+                <pre><code>// Injected DOM Filter: Stripped layout bloat, retained actionable nodes
+{
+  "interactive_elements": [
+    {
+      "tag": "button",
+      "id": "submit-order",
+      "text": "Place Order",
+      "ancestors": ["form#payment-form"],
+      "synthesized_xpath": "//form[@id='payment-form']//button[@id='submit-order']"
+    }
+  ],
+  "token_savings": "87.0%",
+  "latency_improvement": "60% faster inference"
+}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: XPath Fallback -->
+          <div class="lab-view" id="lab-fallback">
+            <div class="lab-screen-header">
+              <span class="lab-meta-tag">STRATEGY: MULTI-TIER RESILIENT LOCATOR HEURISTICS</span>
+              <span class="lab-metric-badge">RECOVERY RATE: 99.4% LOCATOR STABILITY</span>
+            </div>
+            <div class="lab-pipeline-view">
+              <div class="pipeline-step step-done">
+                <span class="step-num">01</span>
+                <strong>Primary DOM Lookup</strong>
+                <small>id, name, test-id matching</small>
+                <span class="step-status status-warn">Shadow DOM Obscured</span>
+              </div>
+              <div class="pipeline-connector">➔</div>
+              <div class="pipeline-step step-done">
+                <span class="step-num">02</span>
+                <strong>Hierarchical XPath Synthesis</strong>
+                <small>Text proximity + parent anchors</small>
+                <span class="step-status status-warn">Dynamic ID Mutated</span>
+              </div>
+              <div class="pipeline-connector">➔</div>
+              <div class="pipeline-step step-active">
+                <span class="step-num">03</span>
+                <strong>Computer Vision Fallback</strong>
+                <small>YOLO/OCR coordinate grounding</small>
+                <span class="step-status status-success">✓ Target Acquired [80% Acc]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: RAG Document Chunking -->
+          <div class="lab-view" id="lab-rag">
+            <div class="lab-screen-header">
+              <span class="lab-meta-tag">RETRIEVAL: MODULAR CHUNKING & ALL-MINILM EMBEDDINGS</span>
+              <span class="lab-metric-badge">SERVER RAM USAGE: REDUCED BY 60%</span>
+            </div>
+            <div class="lab-rag-flow">
+              <div class="rag-card">
+                <span class="rag-badge">MULTIMODAL INGEST</span>
+                <strong>PRD / PDFs / Figma / DOCX</strong>
+                <p>Segmented into module-bounded contextual semantic windows.</p>
+              </div>
+              <div class="pipeline-connector">➔</div>
+              <div class="rag-card">
+                <span class="rag-badge">LIGHTWEIGHT EMBEDDER</span>
+                <strong>sentence-transformers/all-MiniLM-L6-v2</strong>
+                <p>384-dimensional dense vectors with 60% lower RAM footprint.</p>
+              </div>
+              <div class="pipeline-connector">➔</div>
+              <div class="rag-card card-output">
+                <span class="rag-badge badge-glow">STRUCTURED SYNTHESIS</span>
+                <strong>FAISS Vector Store Retrieval</strong>
+                <p>Automated test-case coverage up by 60%, scenarios up by 70%.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Agent Orchestration -->
+          <div class="lab-view" id="lab-agent">
+            <div class="lab-screen-header">
+              <span class="lab-meta-tag">ARCHITECTURE: ASYNC KAFKA ORCHESTRATION & TOOL CALLING</span>
+              <span class="lab-metric-badge">SAFETY: PII FILTER & INJECTION GUARDRAILS</span>
+            </div>
+            <div class="lab-agent-flow">
+              <div class="agent-box"><span class="box-tag">USER INTENT</span><strong>Natural Language Request</strong></div>
+              <div class="pipeline-connector">➔</div>
+              <div class="agent-box agent-core-box"><span class="box-tag">ORCHESTRATOR</span><strong>LLM Router + Tools</strong></div>
+              <div class="pipeline-connector">➔</div>
+              <div class="agent-box"><span class="box-tag">KAFKA STREAM</span><strong>Async Task Queue</strong></div>
+              <div class="pipeline-connector">➔</div>
+              <div class="agent-box agent-success-box"><span class="box-tag">EXECUTOR</span><strong>Generated Automation</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="work-section" id="work">
       <div class="section-wrap">
         <div class="section-heading reveal">
           <div>
-            <div class="section-kicker">03 — SELECTED WORK</div>
+            <div class="section-kicker">04 — SELECTED WORK</div>
             <h2>Projects with a purpose<span class="accent">.</span></h2>
           </div>
           <p>A selection of AI and automation projects, focused on practical workflows and measurable engineering
@@ -334,7 +550,7 @@
     <section class="section-wrap journey-section" id="journey">
       <div class="section-heading reveal">
         <div>
-          <div class="section-kicker">04 — EXPERIENCE & EDUCATION</div>
+          <div class="section-kicker">05 — EXPERIENCE & EDUCATION</div>
           <h2>The path so far<span class="accent">.</span></h2>
         </div>
         <p>Learning, building, and applying AI to real engineering workflows.</p>
@@ -374,7 +590,7 @@
 
     <section class="contact-section" id="contact">
       <div class="section-wrap contact-inner reveal">
-        <div class="section-kicker">05 — CONTACT</div>
+        <div class="section-kicker">06 — CONTACT</div>
         <h2>Have a problem worth<br><span class="gradient-text">solving with AI?</span></h2>
         <p>I'm always interested in discussing intelligent automation, LLM workflows, and practical AI engineering.</p>
         <div class="contact-actions"><a class="button button-primary email-trigger" id="start-conversation-btn"

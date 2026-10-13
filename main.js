@@ -192,4 +192,159 @@
       closeModal();
     });
   }
+
+  // ==========================================
+  // NEURAL NETWORK INTERACTIVE PARTICLE CANVAS
+  // ==========================================
+  const neuralCanvas = document.getElementById('neural-canvas');
+  if (neuralCanvas) {
+    const ctx = neuralCanvas.getContext('2d');
+    let width = (neuralCanvas.width = window.innerWidth);
+    let height = (neuralCanvas.height = window.innerHeight);
+
+    let mouse = { x: null, y: null, radius: 140 };
+
+    window.addEventListener('resize', () => {
+      width = neuralCanvas.width = window.innerWidth;
+      height = neuralCanvas.height = window.innerHeight;
+      initParticles();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    window.addEventListener('mouseout', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    const particles = [];
+    const particleCount = Math.min(Math.floor((width * height) / 18000), 70);
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.6;
+        this.vy = (Math.random() - 0.5) * 0.6;
+        this.radius = Math.random() * 1.8 + 1;
+        this.color = Math.random() > 0.4 ? 'rgba(0, 245, 212, ' : 'rgba(99, 102, 241, ';
+        this.alpha = Math.random() * 0.5 + 0.2;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+
+        // Subtle mouse influence
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius) {
+            const force = (mouse.radius - dist) / mouse.radius;
+            this.x -= (dx / dist) * force * 1.8;
+            this.y -= (dy / dist) * force * 1.8;
+          }
+        }
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color + this.alpha + ')';
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = this.color + '0.8)';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    function initParticles() {
+      particles.length = 0;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function connectParticles() {
+      const maxDistance = 115;
+      for (let a = 0; a < particles.length; a++) {
+        for (let b = a + 1; b < particles.length; b++) {
+          const dx = particles[a].x - particles[b].x;
+          const dy = particles[a].y - particles[b].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < maxDistance) {
+            const alpha = (1 - dist / maxDistance) * 0.22;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 245, 212, ${alpha})`;
+            ctx.lineWidth = 0.85;
+            ctx.moveTo(particles[a].x, particles[a].y);
+            ctx.lineTo(particles[b].x, particles[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    let animationFrameId;
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+      connectParticles();
+      animationFrameId = requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+  }
+
+  // ==========================================
+  // INTERACTIVE AI LAB TAB SWITCHING
+  // ==========================================
+  const labTabs = document.querySelectorAll('.lab-tab');
+  const labViews = document.querySelectorAll('.lab-view');
+
+  labTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const targetLab = tab.dataset.lab;
+      labTabs.forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      labViews.forEach((v) => v.classList.remove('active'));
+
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const targetView = document.getElementById(`lab-${targetLab}`);
+      if (targetView) {
+        targetView.classList.add('active');
+      }
+    });
+  });
+
+  // ==========================================
+  // DYNAMIC MOUSE SPOTLIGHT ON CARDS
+  // ==========================================
+  const spotCards = document.querySelectorAll('.project-card, .expertise-card, .lab-container, .journey-card');
+  spotCards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
 })();
